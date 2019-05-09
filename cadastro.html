@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro de Usuário</title>
+  <!--  <style>
+      input{
+        background-color: red;
+      }
+    </style> -> mostra todo input com cor de fundo vermelha porém com o passar do tempo essa área fica muito longa, para evitar adiciona-se o link para o css externo-->
+<link rel="stylesheet" href="css/estilocad.css">
+  </head>
+  <body>
+    <ul>
+      <li>item 1</li>
+        <li>item 2</li>
+          <li>item 3</li>
+</ul>
+      <form action="cadastro.html" method="post"> <!-- define para onde o formulário vai*-->
+      <label for="nomeCompleto">Nome Completo</label> <br> <!-- label indica que o campo deve ser preenchido + tag br para pular a linha..*/ -->
+      <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Maria da Silva" required> <!-- type para identificar qual info é + name para identificar o campo +id para identificar qual é o campo a ser preenchido + placeholder para incluir um texto de exemplo dentro da caixa de preenchimento*-->
+<!-- <input type="submit" name="Enviar" value="Enviar">   para adicionar o botão de envio porém não permite que trabalhemos no CSS-->
+<br>
+<br>
+<label for="email">Email</label>
+<br>
+<input type="email" name="email" id="email" placeholder="maria@hotmail.com" required> <!-- required quer dizer que esse campo é obrigatório-->
+<br>
+<br>
+<label for="senha">Senha</label>
+<br>
+<input type="password" name="senha" id="senha" required=”true” requiredMessage=”Informe a senha”>  <!-- required é usado para validar se o ux preencheu todos os campos-->
+<br>
+<br>
+<label for="cinema">Você já foi ao cinema esse ano?</label> <!--ux vai selecionar 1 opção de 2 para isso acontecer os NAMES precisam ser iguais - pertencem a mesma pergunta-->
+<br>
+<label for="sim"><input type="radio" name="cinema" id="sim" value="sim" checked>Sim</label>  <!--id para colocar a info no campo + id e name não tem caractere especial-->
+<label for="nao"><input type="radio" name="cinema" id="nao" value="não">Não</label>
+<br>
+<br>
+<label for="generoFilme">Selecione seus gêneros preferidos;</label> <!-- opção com checkbox para selecionar várias opções-->
+<br>
+<label for="drama"><input type="checkbox" name="generoFilme" id="drama" value="drama">Drama</label><br>
+<label for="terror"><input type="checkbox" name="generoFilme" id="terror" value="terror">Terror</label><br>
+<label for="comedia"><input type="checkbox" name="generoFilme" id="comedia" value="comedia">Comédia</label><br>
+<label for="suspense"><input type="checkbox" name="generoFilme" id="suspense" value="suspense">Suspense</label><br>
+<label for="romance"><input type="checkbox" name="generoFilme" id="romance" value="romance">Romance</label><br>
+<label for="ficcao"><input type="checkbox" name="generoFilme" id="ficcao" value="ficcao" checked>Ficção</label><br> <!-- checked é usado se vc quiser já destacar uma opção-->
+<br>
+<label for="genero">Gênero</label> <!-- select com menu de dropdown - seleciona 1 apenas-->
+<br>
+<select name="genero">
+  <option selected disabled>Selecione uma opção</option><!--select mostra que essa opção por padrão esta habilitada - disable faz com que essa opção nao seja selecionável (em cinza)-->
+  <option value="feminino">Feminino</option> <!-- options são as opções para selecionar-->
+  <option value="masculino">Masculino</option>
+  <option value="não binário">Não binário</option>
+  <option value="N/A">N/A</option>
+</select>
+<br>
+<br>
+<label for="paisOrigem">País de Origem</label> <!--menu de dropdowm + o q fica entre abertura e fechamento de label é o q o ux vê (usar acentos e letra maiuscula)-->
+<br>
+<select name="paisOrigem"> <!--for name e id usamos minusculas para não ter erro e manter um padrão-->
+  <option selected disabled>Selecione um país</option> <!-- padrão para indicar uq o ux faz-->
+  <option value="brasil">Brasil</option>
+  <option value="argentina">Argentina</option>
+  <option value="angola">Angola</option>
+  <option value="colombia">Colombia</option>
+    <option value="canada">Canadá</option>
+</select>
+<br>
+<br>
+<label for="comentarios">Comentários</label><br> <!--caixa de texto - usa textarea-->
+<textarea name="comentarios" id="comentarios" rows="3" cols="30">Aqui tem um texto padrão</textarea> <!--pede linhas e colunas mas não é obrigatório pois da para ser feito no css + add texto padrão colocar entre abertura e fechamento do textarea-->
+<br>
+<br>
+<button type="button">Validar Campos</button><!--esse elemento não envia e nem limpa os campos, é elemento visual q vc manupula atravpes do javascript, não faz nada até vc add um botão que chame ele, para q ele interaja com o ux-->
+<button type="reset">Limpar campos</button> <!-- para limpar todos os campos do formulário exceto os pré-definidos-->
+<button type="submit" name="button">Enviar</button> <!-- customizável no css permite que altere cores, bordas e imagens de botão + type submit serve para o envio das informações-->
+    </form>
+  </body>
+</html>

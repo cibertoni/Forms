@@ -1,0 +1,32 @@
+label:hover{
+  color: red; /*HOVER quando passar o mouse em cima os campos ficarão vermelhos*/
+}
+input:hover{
+  border-color: red; /*quando passar o mouse em cima do campo, a borda de preenchimento ficará vermelha*/
+}
+input:focus{
+  background-color: gray; /* FOCUS quando clica para preencher o campo, ele fica cinza*/
+}
+
+ul li:nth-child(2){
+  background-color: red; /*pinta o item selecionado da linda de uma cor >
+  ODD no lugar do numero pinta os numeros impares e EVEN os pares +
+  first-child (sem numero) ele ja sabe que é o primeiro,
+  para pegar o ultimo é last-child */
+}
+
+div{ /*por ser um elemento de bloco, ela ocupa toda a largura do doc e tem uma quebra de linha dps*/*/
+  border: 1px solid #ccc; /*toda div deverá ter borda de 1px com textura solida, cinza*/*/
+}
+
+header, section, footer{
+  border: ipx solid #ccc;
+}
+
+article{
+  border: 2px solid blue;
+}
+
+p span{ /*deixar uma palavra em destaque*/
+  font-size: 50px;
+}
